@@ -23,6 +23,15 @@ npm run dev
 After a few seconds, your project should be accessible at the address
 [http://localhost:5173/](http://localhost:5173/)
 
+### Previewing the static landing page
+To see the SEO-friendly static homepage exactly as deployed, serve the `public` folder directly:
+
+```
+npm run preview:static
+```
+
+This starts a simple Python server on [http://localhost:4173/](http://localhost:4173/) so you can verify the landing page without the SPA bundle. The SPA experience continues to run at [http://localhost:5173/](http://localhost:5173/) when using `npm run dev`.
+
 
 If you are satisfied with the result, you can finally build the project for release with:
 

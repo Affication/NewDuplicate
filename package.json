@@ -10,7 +10,8 @@
   "scripts": {
     "start": "vite",
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "preview:static": "cd public && python -m http.server 4173"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.1",
