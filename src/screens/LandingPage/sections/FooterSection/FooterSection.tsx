@@ -43,14 +43,9 @@ export const FooterSection = (): JSX.Element => {
       <div className="flex-col items-start gap-[100px] flex relative w-full max-w-[1480px] flex-[0_0_auto]">
         <div className="flex w-full gap-[100px] items-start relative flex-[0_0_auto]">
           <div className="inline-flex flex-col gap-[15px] items-start relative flex-[0_0_auto]">
-            <div className="relative w-[193px] h-[34px]">
-              <img
-                className="absolute w-[37px] h-[29px] top-0.5 left-0"
-                alt="Logo icon"
-                src="/logo-icon.svg"
-              />
-
-              <div className="absolute top-0 left-[47px] [font-family:'Inter',Helvetica] font-bold text-white text-[28px] tracking-[0] leading-[normal]">
+            <div className="flex items-center gap-3">
+              <span className="h-9 w-9 rounded-xl bg-white/20 text-white font-bold inline-flex items-center justify-center">SP</span>
+              <div className="[font-family:'Inter',Helvetica] font-bold text-white text-[28px] tracking-[0] leading-[normal]">
                 whitepace
               </div>
             </div>
@@ -97,11 +92,7 @@ export const FooterSection = (): JSX.Element => {
                 Start today
               </div>
 
-              <img
-                className="relative flex-[0_0_auto] mr-[-0.50px]"
-                alt="Icon"
-                src="/icon-18.svg"
-              />
+              <span aria-hidden className="relative flex-[0_0_auto] mr-[-0.50px] text-white font-semibold">→</span>
             </Button>
           </div>
         </div>
@@ -109,12 +100,6 @@ export const FooterSection = (): JSX.Element => {
         <div className="flex items-center justify-between relative w-full flex-[0_0_auto]">
           <div className="inline-flex items-center gap-[60px] relative flex-[0_0_auto]">
             <div className="inline-flex items-center justify-center gap-1.5 relative flex-[0_0_auto]">
-              <img
-                className="relative flex-[0_0_auto]"
-                alt="Icon"
-                src="/icon-23.svg"
-              />
-
               <div className="relative w-fit mt-[-1.00px] font-paragraph-p3-regular font-[number:var(--paragraph-p3-regular-font-weight)] text-white text-[length:var(--paragraph-p3-regular-font-size)] tracking-[var(--paragraph-p3-regular-letter-spacing)] leading-[var(--paragraph-p3-regular-line-height)] whitespace-nowrap [font-style:var(--paragraph-p3-regular-font-style)]">
                 English
               </div>
@@ -132,11 +117,16 @@ export const FooterSection = (): JSX.Element => {
             ))}
           </div>
 
-          <img
-            className="relative flex-[0_0_auto]"
-            alt="Social icon"
-            src="/social-icon.svg"
-          />
+          <div className="flex gap-3 text-white">
+            {["in", "fb", "tw"].map((network) => (
+              <span
+                key={network}
+                className="h-10 w-10 rounded-full border border-white/40 flex items-center justify-center uppercase text-sm font-semibold"
+              >
+                {network}
+              </span>
+            ))}
+          </div>
         </div>
 
         <Separator className="absolute w-full h-px top-[248px] left-0 bg-white/20" />
