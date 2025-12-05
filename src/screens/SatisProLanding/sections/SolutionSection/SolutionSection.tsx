@@ -4,26 +4,26 @@ import { Button } from "../../../../components/ui/button";
 
 const steps = [
   {
-    icon: "/G.png",
+    icon: Link,
     title: "Connect your Google Business Profile",
     description: "Simple one-click integration with your existing Google Business account",
     color: "text-blue-600",
-    bgColor: "bg-blue-50"
+    bgColor: "bg-blue-50",
   },
   {
-    icon: "/ChatGPT.png",
+    icon: Zap,
     title: "AI replies instantly to reviews",
     description: "Our AI crafts personalized, professional responses in your brand voice",
     color: "text-green-600",
-    bgColor: "bg-green-50"
+    bgColor: "bg-green-50",
   },
   {
-    icon: "/Dashboard.png",
+    icon: BarChart3,
     title: "Get weekly dashboards & summaries",
     description: "Track performance and insights with Pro plan analytics",
     color: "text-purple-600",
-    bgColor: "bg-purple-50"
-  }
+    bgColor: "bg-purple-50",
+  },
 ];
 
 export const SolutionSection = (): JSX.Element => {
@@ -46,11 +46,7 @@ export const SolutionSection = (): JSX.Element => {
             <div key={index} className="relative">
               <div className="text-center group hover:scale-105 transition-transform duration-300">
                 <div className={`w-20 h-20 ${step.bgColor} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  {typeof step.icon === 'string' ? (
-                    <img src={step.icon} alt="ChatGPT icon" className="w-15 h-15" />
-                  ) : (
-                    <step.icon className={`w-15 h-15 ${step.color}`} />
-                  )}
+                  <step.icon className={`w-10 h-10 ${step.color}`} />
                 </div>
                 
                 <h3 className="text-xl font-bold text-gray-900 mb-4">

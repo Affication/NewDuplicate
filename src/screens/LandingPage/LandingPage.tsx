@@ -10,13 +10,6 @@ import { TestimonialSection } from "./sections/TestimonialSection/TestimonialSec
 import { WorkManagementSection } from "./sections/WorkManagementSection/WorkManagementSection";
 import { WorkSection } from "./sections/WorkSection/WorkSection";
 
-const sponsorLogos = [
-  {
-    src: "/sponsors.svg",
-    alt: "Sponsors",
-  },
-];
-
 export const LandingPage = (): JSX.Element => {
   return (
     <div className="bg-white w-full min-h-screen">

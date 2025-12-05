@@ -3,43 +3,47 @@ import { Button } from "../../../../components/ui/button";
 
 export const AppsSection = (): JSX.Element => {
   return (
-    <section className="flex w-full items-start gap-[100px] px-8 py-[140px] relative bg-[#043873]">
-      <img
-        className="absolute w-full h-[700px] top-2.5 left-0"
-        alt="Element"
-        src="/element-7.png"
-      />
+    <section className="flex w-full flex-col items-start gap-10 px-8 py-[120px] relative bg-gradient-to-br from-[#0b2a66] via-[#0f3c9e] to-[#0b2a66] overflow-hidden">
+      <div className="absolute inset-0 opacity-60" aria-hidden>
+        <div className="absolute w-72 h-72 bg-white/10 rounded-full blur-3xl top-10 left-6" />
+        <div className="absolute w-96 h-96 bg-cyan-400/20 rounded-full blur-3xl bottom-0 right-0" />
+      </div>
 
-      <img
-        className="relative w-[582px] h-[470.8px]"
-        alt="Apps"
-        src="/apps.png"
-      />
-
-      <div className="flex flex-col items-start gap-[60px] relative flex-1 grow">
-        <div className="flex flex-col items-start gap-6 relative self-stretch w-full flex-[0_0_auto]">
-          <h1 className="relative self-stretch mt-[-1.00px] font-header-h1 font-[number:var(--header-h1-font-weight)] text-white text-[length:var(--header-h1-font-size)] tracking-[var(--header-h1-letter-spacing)] leading-[var(--header-h1-line-height)] [font-style:var(--header-h1-font-style)]">
-            Work with Your Favorite Apps Using whitepace
+      <div className="grid w-full grid-cols-1 gap-12 lg:grid-cols-2 relative">
+        <div className="flex flex-col gap-6">
+          <div className="flex gap-3 flex-wrap">
+            {["Zapier", "Calendars", "Point of sale", "Web chat", "Email"].map((tag) => (
+              <span
+                key={tag}
+                className="text-white/90 bg-white/10 border border-white/20 px-3 py-2 rounded-full text-sm font-semibold"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+          <h1 className="font-header-h1 text-white leading-[var(--header-h1-line-height)] text-[length:var(--header-h1-font-size)]">
+            Work with your favorite apps without extra tabs
           </h1>
-
-          <p className="relative self-stretch font-paragraph-p2-regular font-[number:var(--paragraph-p2-regular-font-weight)] text-white text-[length:var(--paragraph-p2-regular-font-size)] tracking-[var(--paragraph-p2-regular-letter-spacing)] leading-[var(--paragraph-p2-regular-line-height)] [font-style:var(--paragraph-p2-regular-font-style)]">
-            Whitepace teams up with your favorite software. Integrate with over
-            1000+ apps with Zapier to have all the tools you need for your
-            project success.
+          <p className="font-paragraph-p2-regular text-white/90 text-[length:var(--paragraph-p2-regular-font-size)]">
+            Connect calendars, CRMs, and ticketing tools so review requests fire automatically after every visit while replies
+            stay consistent across channels.
           </p>
+          <Button className="inline-flex items-center justify-center gap-2.5 px-10 py-5 bg-white text-[#0b2a66] rounded-lg h-auto hover:bg-white/90">
+            <span className="font-paragraph-p2-medium text-[length:var(--paragraph-p2-medium-font-size)]">Read more</span>
+            <span aria-hidden className="text-lg font-semibold">→</span>
+          </Button>
         </div>
 
-        <Button className="inline-flex items-center justify-center gap-2.5 px-10 py-5 relative flex-[0_0_auto] bg-[#4f9cf9] rounded-lg h-auto hover:bg-[#4f9cf9]/90">
-          <span className="relative w-fit mt-[-1.00px] font-paragraph-p2-medium font-[number:var(--paragraph-p2-medium-font-weight)] text-white text-[length:var(--paragraph-p2-medium-font-size)] tracking-[var(--paragraph-p2-medium-letter-spacing)] leading-[var(--paragraph-p2-medium-line-height)] whitespace-nowrap [font-style:var(--paragraph-p2-medium-font-style)]">
-            Read more
-          </span>
-
-          <img
-            className="relative flex-[0_0_auto] mr-[-0.50px]"
-            alt="Icon"
-            src="/icon-18.svg"
-          />
-        </Button>
+        <div className="grid grid-cols-2 gap-4 relative z-10">
+          {["Email & SMS", "CRM", "POS", "Support Desk", "Calendar", "Webhooks"].map((item) => (
+            <div
+              key={item}
+              className="h-28 rounded-2xl bg-white/10 border border-white/20 text-white font-semibold flex items-center justify-center text-center px-4"
+            >
+              {item}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -7,12 +7,6 @@ export const CustomizationSection = (): JSX.Element => {
     <section className="flex w-full items-center gap-[98px] px-8 py-[140px] relative">
       <div className="flex flex-col items-start gap-[60px] relative flex-1">
         <div className="flex flex-col items-start gap-6 relative w-full">
-          <img
-            className="absolute w-[418px] h-[31px] top-[148px] left-0"
-            alt="Element"
-            src="/element-1.png"
-          />
-
           <h2 className="relative w-full mt-[-1.00px] font-header-h1 font-[number:var(--header-h1-font-weight)] text-[#212529] text-[length:var(--header-h1-font-size)] tracking-[var(--header-h1-letter-spacing)] leading-[var(--header-h1-line-height)] [font-style:var(--header-h1-font-style)]">
             Customise it to <br />
             your needs
