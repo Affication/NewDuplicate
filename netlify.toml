@@ -1,16 +1,10 @@
-# Build settings
+# Static site deployment for satispro.net
 [build]
   command = "npm run build"
   publish = "."
 
-# Static SEO homepage
+# Serve the static landing page for all routes
 [[redirects]]
   from = "/"
   to = "/index.html"
-  status = 200
-
-# All other pages handled by SPA
-[[redirects]]
-  from = "/*"
-  to = "/spa/index.html"
   status = 200
