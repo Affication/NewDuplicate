@@ -168,6 +168,168 @@
         padding-top: 40px;
       }
 
+      .gbp-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 28px;
+        align-items: stretch;
+      }
+
+      .gbp-visual {
+        display: grid;
+        gap: 16px;
+      }
+
+      .map-card {
+        background: radial-gradient(circle at 20% 20%, #1f6feb14, #e0ecff), #ffffff;
+        border: 1px solid #d9e6ff;
+        border-radius: 18px;
+        padding: 16px;
+        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+      }
+
+      .map-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        font-weight: 700;
+        color: #0f172a;
+      }
+
+      .map {
+        position: relative;
+        overflow: hidden;
+        border-radius: 14px;
+        background: linear-gradient(135deg, #dbeafe 0%, #f5f8ff 100%);
+        height: 180px;
+        border: 1px dashed #a5b4fc;
+      }
+
+      .map::before,
+      .map::after {
+        content: "";
+        position: absolute;
+        background: rgba(31, 111, 235, 0.15);
+        border-radius: 999px;
+      }
+
+      .map::before {
+        width: 220px;
+        height: 220px;
+        top: -40px;
+        right: -60px;
+      }
+
+      .map::after {
+        width: 160px;
+        height: 160px;
+        bottom: -80px;
+        left: -40px;
+      }
+
+      .map-pin {
+        position: absolute;
+        top: 32%;
+        left: 48%;
+        transform: translate(-50%, -50%);
+        display: grid;
+        place-items: center;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #1f6feb, #22c55e);
+        color: #ffffff;
+        font-weight: 800;
+        box-shadow: 0 18px 32px rgba(31, 111, 235, 0.35);
+        border: 4px solid #e0ecff;
+      }
+
+      .map-road {
+        position: absolute;
+        inset: 22% 12%;
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        border-radius: 14px;
+      }
+
+      .map-road::before,
+      .map-road::after {
+        content: "";
+        position: absolute;
+        background: rgba(15, 23, 42, 0.08);
+      }
+
+      .map-road::before {
+        top: 50%;
+        left: -10%;
+        right: -10%;
+        height: 1px;
+      }
+
+      .map-road::after {
+        left: 50%;
+        top: -12%;
+        bottom: -12%;
+        width: 1px;
+      }
+
+      .map-stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 10px;
+        margin-top: 12px;
+      }
+
+      .stat-chip {
+        background: #0b1222;
+        color: #e2e8f0;
+        border-radius: 12px;
+        padding: 10px 12px;
+        display: grid;
+        gap: 2px;
+      }
+
+      .stat-chip strong {
+        color: #ffffff;
+        font-size: 18px;
+      }
+
+      .profile-card {
+        background: linear-gradient(135deg, #0b1222, #152440);
+        color: #e2e8f0;
+        border-radius: 18px;
+        padding: 18px;
+        border: 1px solid rgba(226, 232, 240, 0.08);
+        box-shadow: 0 22px 40px rgba(7, 18, 36, 0.35);
+      }
+
+      .profile-card h3 {
+        margin: 0 0 6px;
+        color: #ffffff;
+      }
+
+      .health-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        margin: 10px 0 6px;
+      }
+
+      .progress-bar {
+        width: 100%;
+        height: 10px;
+        background: rgba(226, 232, 240, 0.18);
+        border-radius: 999px;
+        overflow: hidden;
+      }
+
+      .progress-fill {
+        height: 100%;
+        border-radius: inherit;
+        background: linear-gradient(90deg, #22c55e, #1f6feb);
+      }
+
       .eyebrow {
         display: inline-flex;
         align-items: center;
@@ -280,6 +442,15 @@
         background: #e2e8f0;
         font-weight: 600;
         color: #0f172a;
+      }
+
+      .list-row {
+        display: grid;
+        gap: 8px;
+      }
+
+      .list-row .badge-soft {
+        align-self: flex-start;
       }
 
       .industries {
@@ -498,6 +669,7 @@
         </div>
         <nav aria-label="Primary">
           <ul>
+            <li><a href="#gbp">GBP</a></li>
             <li><a href="#features">Features</a></li>
             <li><a href="#industries">Industries</a></li>
             <li><a href="#benefits">Benefits</a></li>
@@ -563,6 +735,74 @@
             <div class="kpi"><span>Review replies</span><strong>Auto in 3s</strong></div>
             <div class="kpi"><span>GBP optimization</span><strong>Weekly tasks</strong></div>
             <div class="kpi"><span>Insights</span><strong>Dashboards & summaries</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="gbp">
+        <div class="gbp-grid">
+          <div>
+            <span class="eyebrow">Google Business Profile control</span>
+            <h2>Keep your Google Business Profile polished and chosen</h2>
+            <p>
+              SatisPro pairs AI replies with proactive GBP care: secure OAuth, listing hygiene tasks, suggested posts, and
+              category tuning so you surface in the map pack for every search that matters.
+            </p>
+            <div class="list-row">
+              <span class="badge-soft">Google OAuth security</span>
+              <span class="badge-soft">Listing hygiene & updates</span>
+              <span class="badge-soft">Weekly optimization plan</span>
+            </div>
+            <ul class="check-list" style="margin-top:12px;">
+              <li><span class="tiny-check">✓</span> Auto-replies that mirror your brand voice across all Google reviews</li>
+              <li><span class="tiny-check">✓</span> GBP optimization for categories, hours, Q&A, and posts to lift visibility</li>
+              <li><span class="tiny-check">✓</span> Health scoring with clear actions so you always know what to fix next</li>
+            </ul>
+          </div>
+          <div class="gbp-visual" aria-hidden="true">
+            <div class="map-card">
+              <div class="map-header">
+                <span>Google Business Profile · Vienna</span>
+                <span class="badge-soft" style="background:#d1fae5; color:#065f46;">Live</span>
+              </div>
+              <div class="map">
+                <div class="map-road"></div>
+                <div class="map-pin">SP</div>
+              </div>
+              <div class="map-stats">
+                <div class="stat-chip">
+                  <small>GBP visibility</small>
+                  <strong>+26%</strong>
+                  <span>week over week</span>
+                </div>
+                <div class="stat-chip">
+                  <small>Local rank</small>
+                  <strong>#3 → #1</strong>
+                  <span>map pack</span>
+                </div>
+              </div>
+            </div>
+            <div class="profile-card">
+              <h3>Listing health</h3>
+              <div class="health-row">
+                <span>Profile completeness</span>
+                <span>96%</span>
+              </div>
+              <div class="progress-bar"><div class="progress-fill" style="width:96%"></div></div>
+              <div class="health-row">
+                <span>New reviews replied</span>
+                <span>24/24</span>
+              </div>
+              <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+              <div class="health-row">
+                <span>Suggested updates</span>
+                <span>Posts ready</span>
+              </div>
+              <div class="pill-row">
+                <span class="pill" style="background:#e0ecff; color:#1f6feb; border:1px solid #bfdbfe;">Publish 2 Google posts</span>
+                <span class="pill" style="background:#d1fae5; color:#065f46; border:1px solid #a7f3d0;">New photo added</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
