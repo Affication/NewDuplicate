@@ -1,3 +1,8 @@
+# Build settings
+[build]
+  command = "npm run build"
+  publish = "."
+
 # Static SEO homepage
 [[redirects]]
   from = "/"

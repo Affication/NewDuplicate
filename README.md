@@ -39,4 +39,7 @@ If you are satisfied with the result, you can finally build the project for rele
 npm run build
 ```
 
+For Netlify deployments, set the publish directory to the repository root (".") so the static `index.html` and the generated
+`/spa` bundle are both available. The included `netlify.toml` already pins the build command and publish path accordingly.
+
 > **Note:** The execution environment used for this repository does not ship with Node.js/npm by default. A lightweight `npm` shim is included in the project root that forwards `npm` commands to Bun when a real npm executable is unavailable. If you encounter a `command not found: npm` error, run the build from the project root so the shim is in your `PATH` (for example: `PATH="$PWD:$PATH" npm run build`) or call Bun directly with `bun run build`.
