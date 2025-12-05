@@ -44,7 +44,7 @@ export const HeroSection = (): JSX.Element => {
             <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-100">
               <div className="space-y-6">
                 <div className="flex items-center gap-3 pb-4 border-b border-gray-100">
-                  <img src="/image.png" alt="Google Maps Icon" className="w-5 h-6" />
+                  <span className="w-7 h-7 rounded-md bg-blue-100 text-blue-700 grid place-items-center text-xs font-bold">MAP</span>
                   <span className="font-semibold text-gray-900">Google Maps Reviews</span>
                   <span className="ml-auto text-xs sm:text-sm text-green-600 bg-green-50 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full whitespace-nowrap">
                     AI Active

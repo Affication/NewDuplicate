@@ -1,4 +1,16 @@
+# Build settings
+[build]
+  command = "npm run build"
+  publish = "."
+
+# Static SEO homepage
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 200
+
+# All other pages handled by SPA
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/spa/index.html"
   status = 200

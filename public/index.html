@@ -45,6 +45,8 @@
         --light: #f3f6fb;
         --accent: #0ea5e9;
         --radius: 14px;
+        --sand: #fef7ee;
+        --ink: #0b1222;
       }
 
       * {
@@ -55,7 +57,7 @@
         margin: 0;
         font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
         color: #0f172a;
-        background: #f8fafc;
+        background: linear-gradient(180deg, #f6f9ff 0%, #f8fafc 60%, #ffffff 100%);
         line-height: 1.6;
       }
 
@@ -69,7 +71,7 @@
         top: 0;
         z-index: 20;
         backdrop-filter: blur(10px);
-        background: rgba(255, 255, 255, 0.92);
+        background: rgba(255, 255, 255, 0.94);
         border-bottom: 1px solid #e2e8f0;
       }
 
@@ -95,14 +97,14 @@
         width: 42px;
         height: 42px;
         border-radius: 12px;
-        background: conic-gradient(from 160deg, #22c55e, #1f6feb, #0ea5e9, #22c55e);
+        background: radial-gradient(circle at 30% 30%, #22c55e, #1f6feb 65%);
         display: grid;
         place-items: center;
         color: white;
         font-weight: 800;
         letter-spacing: 0.4px;
         font-size: 12px;
-        box-shadow: 0 12px 28px rgba(15, 23, 42, 0.15);
+        box-shadow: 0 12px 28px rgba(15, 23, 42, 0.18);
       }
 
       nav ul {
@@ -222,14 +224,15 @@
 
       .hero-visual {
         position: relative;
-        background: radial-gradient(circle at 20% 20%, rgba(34, 197, 94, 0.2), transparent 50%),
-          radial-gradient(circle at 80% 10%, rgba(31, 111, 235, 0.25), transparent 45%),
+        background: radial-gradient(circle at 20% 20%, rgba(34, 197, 94, 0.22), transparent 55%),
+          radial-gradient(circle at 80% 10%, rgba(31, 111, 235, 0.28), transparent 50%),
           linear-gradient(135deg, #0ea5e9 0%, #1f6feb 50%, #0ea5e9 100%);
         color: #fff;
         padding: 28px;
         border-radius: 20px;
         overflow: hidden;
-        min-height: 320px;
+        min-height: 340px;
+        box-shadow: 0 30px 60px rgba(31, 111, 235, 0.25);
       }
 
       .hero-visual::after {
@@ -367,6 +370,117 @@
         font-weight: 900;
       }
 
+      .hero-meta {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 14px;
+      }
+
+      .badge-soft {
+        background: #e0ecff;
+        color: #0f172a;
+        padding: 8px 12px;
+        border-radius: 10px;
+        font-weight: 600;
+      }
+
+      .hero-card {
+        background: #ffffff;
+        color: #0f172a;
+        border-radius: 14px;
+        padding: 14px;
+        display: grid;
+        gap: 8px;
+        box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+      }
+
+      .hero-card .name {
+        font-weight: 700;
+      }
+
+      .hero-card .role {
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .hero-card .reply {
+        background: #f1f5f9;
+        padding: 10px;
+        border-radius: 12px;
+        color: #0f172a;
+        border: 1px solid #e2e8f0;
+      }
+
+      .split-section {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 18px;
+        padding: 28px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 18px;
+        align-items: center;
+        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+      }
+
+      .step-list {
+        display: grid;
+        gap: 14px;
+      }
+
+      .step {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+      }
+
+      .step .index {
+        width: 32px;
+        height: 32px;
+        border-radius: 10px;
+        background: #e0ecff;
+        color: #0f172a;
+        font-weight: 800;
+        display: grid;
+        place-items: center;
+      }
+
+      .inline-accent {
+        color: #1f6feb;
+        font-weight: 700;
+      }
+
+      .cta-banner {
+        background: linear-gradient(135deg, #1f6feb, #22c55e);
+        color: #ffffff;
+        border-radius: 18px;
+        padding: 26px;
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        align-items: center;
+        flex-wrap: wrap;
+        box-shadow: 0 22px 48px rgba(31, 111, 235, 0.3);
+      }
+
+      .soft-card {
+        background: var(--sand);
+        border-radius: 16px;
+        border: 1px solid #fde7cc;
+        padding: 18px;
+        display: grid;
+        gap: 10px;
+        color: var(--ink);
+      }
+
+      .mini-grid {
+        display: grid;
+        gap: 12px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      }
+
       @media (prefers-reduced-motion: reduce) {
         * {
           transition: none !important;
@@ -391,8 +505,8 @@
           </ul>
         </nav>
         <div class="cta-group">
-          <a class="btn btn-secondary" href="#pricing">See pricing</a>
-          <a class="btn btn-primary" href="#cta">Start free</a>
+          <a class="btn btn-secondary" href="/spa">Sign in</a>
+          <a class="btn btn-primary" href="#cta">Start Free Trial</a>
         </div>
       </div>
     </header>
@@ -400,15 +514,20 @@
     <main>
       <section class="section hero" id="cta">
         <div>
-          <span class="eyebrow">Automate Google review growth</span>
-          <h1>Rank higher, win trust, and collect 5-star Google reviews on autopilot.</h1>
+          <span class="eyebrow">AI answers your Google reviews instantly</span>
+          <h1>Save hours while SatisPro replies with your voice — automatically.</h1>
           <p>
-            SatisPro monitors your Google Business Profile, requests fresh reviews after every visit, and drafts smart replies
-            so you stay visible in the local map pack. No extra tabs, no manual chasing—just steady reputation momentum.
+            Connect your Google Business Profile with secure OAuth, let AI craft timely, on-brand replies, and keep your listing
+            optimized so you rank higher and get chosen first.
           </p>
           <div class="cta-group">
-            <a class="btn btn-primary" href="#pricing">Start my free trial</a>
-            <a class="btn btn-secondary" href="/spa">Open dashboard</a>
+            <a class="btn btn-primary" href="#pricing">Start Free Trial</a>
+            <a class="btn btn-secondary" href="/spa">Sign in</a>
+          </div>
+          <div class="hero-meta">
+            <span class="badge-soft">100% automated responses</span>
+            <span class="badge-soft">Secure Google OAuth</span>
+            <span class="badge-soft">Brand-safe tone</span>
           </div>
           <div class="pill-row" style="margin-top: 16px">
             <span class="pill">Restaurants</span>
@@ -420,37 +539,89 @@
           </div>
         </div>
         <div class="hero-visual" aria-hidden="true">
-          <div class="stat-badge">+42% map-pack views</div>
-          <div class="kpi-stack">
-            <div class="kpi"><span>Auto review requests</span><strong>Every visit</strong></div>
-            <div class="kpi"><span>Suggested replies</span><strong>Ready in 3s</strong></div>
-            <div class="kpi"><span>GBP health</span><strong>98/100</strong></div>
+          <div class="stat-badge">100% Automated · All Active</div>
+          <div class="hero-card" style="margin-top: 18px; background: rgba(255, 255, 255, 0.9)">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <div class="avatar">JD</div>
+              <div>
+                <div class="name">John D.</div>
+                <div class="role">“Great service and friendly staff!”</div>
+              </div>
+            </div>
+            <div class="reply">
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                <div class="tiny-check" aria-hidden="true">✓</div>
+                <strong>Your Business · AI Reply</strong>
+              </div>
+              <p style="margin: 0; color: #0f172a;">
+                Thank you, John! We’re delighted you had a great experience with our team. Your kind words mean a lot, and we
+                can’t wait to welcome you back soon.
+              </p>
+            </div>
+          </div>
+          <div class="kpi-stack" style="margin-top: 20px">
+            <div class="kpi"><span>Review replies</span><strong>Auto in 3s</strong></div>
+            <div class="kpi"><span>GBP optimization</span><strong>Weekly tasks</strong></div>
+            <div class="kpi"><span>Insights</span><strong>Dashboards & summaries</strong></div>
           </div>
         </div>
       </section>
 
       <section class="section" id="features">
-        <h2>SEO-ready features built for local businesses</h2>
-        <p>
-          Combine automated outreach, templated replies, and GBP optimization cues to keep your locations ranking in every
-          neighborhood you serve.
-        </p>
-        <div class="feature-grid">
-          <article class="card">
-            <div class="icon-circle">AI</div>
-            <h3>AI-crafted replies</h3>
-            <p>Respond to every Google review in the right tone automatically while keeping brand-safe guardrails.</p>
-          </article>
-          <article class="card">
-            <div class="icon-circle">SMS</div>
-            <h3>Post-visit outreach</h3>
-            <p>Trigger SMS and email requests after checkouts to capture fresh, high-intent feedback that lifts rankings.</p>
-          </article>
-          <article class="card">
-            <div class="icon-circle">GBP</div>
-            <h3>Profile optimization</h3>
-            <p>Get weekly tasks that keep your Google Business Profile accurate, keyword-rich, and conversion ready.</p>
-          </article>
+        <div class="split-section">
+          <div>
+            <h2>AI handles replies with a human touch</h2>
+            <p>
+              SatisPro writes thoughtful, on-brand replies for every Google review while you keep full control through secure
+              Google OAuth. Each response is tuned to your brand voice and posted instantly.
+            </p>
+            <div class="step-list">
+              <div class="step">
+                <div class="index">1</div>
+                <div>
+                  <strong>Connect your Google Business Profile</strong>
+                  <p style="margin: 6px 0 0;">Simple one-click integration with your existing account.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="index">2</div>
+                <div>
+                  <strong>AI replies instantly to reviews</strong>
+                  <p style="margin: 6px 0 0;">Keep your tone consistent and professional without manual typing.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="index">3</div>
+                <div>
+                  <strong>Get weekly dashboards & summaries</strong>
+                  <p style="margin: 6px 0 0;">Track performance and insights with pro-level analytics.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-card" style="background: #ffffff; border: 1px solid #e2e8f0;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <div class="avatar">AM</div>
+                <div>
+                  <div class="name">Arna M.</div>
+                  <div class="role">"The food was excellent and the service is always top notch!"</div>
+                </div>
+              </div>
+              <span class="badge-soft" style="background:#d1fae5; color:#065f46;">All Active</span>
+            </div>
+            <div class="reply">
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                <div class="tiny-check" aria-hidden="true">✓</div>
+                <strong>Your Business · AI Reply</strong>
+              </div>
+              <p style="margin: 0;">Thank you, Arna! We’re glad you enjoyed your visit. We appreciate your kind words and hope to see you again soon.</p>
+            </div>
+            <div class="kpi" style="background:#f8fafc; color:#0f172a;">
+              <span>Slow replies lose customers</span>
+              <strong style="color:#1f6feb;">Act fast or lose them</strong>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -484,6 +655,20 @@
             <h3>More 5-star proof</h3>
             <p>Polite, timely outreach combined with tailored suggestions produces more high-quality public feedback.</p>
           </article>
+        </div>
+        <div class="soft-card" style="margin-top:24px;">
+          <strong>See SatisPro in action</strong>
+          <p style="margin:0;">Watch how our AI transforms a negative review into a positive interaction while keeping your brand voice consistent.</p>
+          <div class="mini-grid">
+            <div class="card" style="background:#ffffff;">
+              <div class="quote">Slow replies lose customers. Act fast or lose them.</div>
+              <p style="margin:0; color:var(--muted);">Manual review replies take too long and don’t guarantee consistency. Customers notice when businesses don’t respond quickly or professionally.</p>
+            </div>
+            <div class="card" style="background:#ffffff;">
+              <div class="quote">AI handles replies with a human touch.</div>
+              <p style="margin:0; color:var(--muted);">SatisPro writes replies for you. Each response sounds professional and warm, matching your brand voice across all reviews.</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -541,6 +726,13 @@
               <li><span class="tiny-check">✓</span> Migration assistance</li>
             </ul>
           </article>
+        </div>
+        <div class="cta-banner" style="margin-top:28px;">
+          <div>
+            <h3 style="margin:0;">Ready to automate every review reply?</h3>
+            <p style="margin:6px 0 0; color:#e8f0ff;">Connect securely with Google OAuth and see your Google Business Profile thrive.</p>
+          </div>
+          <a class="btn btn-primary" href="#cta" style="background:#ffffff; color:#0f172a; box-shadow:none;">Start Free Trial</a>
         </div>
       </section>
     </main>

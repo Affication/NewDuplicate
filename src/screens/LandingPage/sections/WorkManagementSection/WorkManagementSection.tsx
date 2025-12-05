@@ -9,13 +9,6 @@ const sectionData = [
     description:
       "Images, videos, PDFs and audio files are supported. Create math expressions and diagrams directly from the app. Take photos with the mobile app and save them to a note.",
     buttonText: "Get Started",
-    elementImage: "/element-9.png",
-    elementPosition: "top-[150px] left-[3px]",
-    elementSize: "w-[516px] h-[38px]",
-    hasPlaceholder: true,
-    backgroundImage: null,
-    backgroundPosition: null,
-    backgroundSize: null,
     layout: "text-left",
   },
   {
@@ -24,16 +17,7 @@ const sectionData = [
     description:
       "With whitepace, share your notes with your colleagues and collaborate on them. You can also publish a note to the internet and share the URL with others.",
     buttonText: "Try it now",
-    elementImage: "/element-10.png",
-    elementPosition: "top-[65px] left-[215px]",
-    elementSize: "w-[334px] h-[26px]",
-    hasPlaceholder: false,
-    backgroundImage: "/background-1.png",
-    backgroundPosition: "top-[-795px] left-[-775px]",
-    backgroundSize: "w-[218px] h-[440px]",
     layout: "text-right",
-    mainImage: "/work-together-image.png",
-    mainImageSize: "w-[583px] h-[542.76px]",
   },
 ];
 
@@ -43,12 +27,6 @@ export const WorkManagementSection = (): JSX.Element => {
       <div className="items-center flex relative self-stretch w-full flex-[0_0_auto]">
         <div className="flex flex-col items-start gap-[60px] relative flex-1 grow">
           <div className="flex flex-col items-start gap-6 relative self-stretch w-full flex-[0_0_auto]">
-            <img
-              className={`absolute ${sectionData[0].elementSize} ${sectionData[0].elementPosition}`}
-              alt="Element"
-              src={sectionData[0].elementImage}
-            />
-
             <h2 className="relative self-stretch mt-[-1.00px] font-header-h1 font-[number:var(--header-h1-font-weight)] text-[#212529] text-[length:var(--header-h1-font-size)] tracking-[var(--header-h1-letter-spacing)] leading-[var(--header-h1-line-height)] [font-style:var(--header-h1-font-style)]">
               {sectionData[0].title}
             </h2>
@@ -67,24 +45,14 @@ export const WorkManagementSection = (): JSX.Element => {
           </Button>
         </div>
 
-        <div className="relative w-[719px] h-[448px] bg-primary-100" />
+        <div className="relative w-[719px] h-[448px] rounded-[24px] bg-gradient-to-br from-primary-100 via-white to-primary-200 border border-primary-200 shadow-lg" />
       </div>
 
       <div className="items-center gap-40 flex relative self-stretch w-full flex-[0_0_auto]">
-        <img
-          className={`relative ${sectionData[1].mainImageSize}`}
-          alt="Work together image"
-          src={sectionData[1].mainImage}
-        />
+        <div className="relative w-[583px] h-[340px] rounded-[28px] bg-gradient-to-br from-[#4f9cf9] via-[#c3ddff] to-white shadow-xl" />
 
         <div className="flex flex-col items-start gap-[60px] relative flex-1 grow">
           <div className="flex flex-col items-start gap-6 relative self-stretch w-full flex-[0_0_auto]">
-            <img
-              className={`absolute ${sectionData[1].elementSize} ${sectionData[1].elementPosition}`}
-              alt="Element"
-              src={sectionData[1].elementImage}
-            />
-
             <h2 className="relative self-stretch mt-[-1.00px] font-header-h1 font-[number:var(--header-h1-font-weight)] text-[#212529] text-[length:var(--header-h1-font-size)] tracking-[var(--header-h1-letter-spacing)] leading-[var(--header-h1-line-height)] [font-style:var(--header-h1-font-style)]">
               {sectionData[1].title}
             </h2>
@@ -93,11 +61,6 @@ export const WorkManagementSection = (): JSX.Element => {
               {sectionData[1].description}
             </p>
 
-            <img
-              className={`absolute ${sectionData[1].backgroundSize} ${sectionData[1].backgroundPosition}`}
-              alt="Background"
-              src={sectionData[1].backgroundImage}
-            />
           </div>
 
           <Button className="inline-flex items-center justify-center gap-2.5 px-10 py-5 relative flex-[0_0_auto] bg-[#4f9cf9] rounded-lg h-auto hover:bg-[#4f9cf9]/90">

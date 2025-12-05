@@ -21,11 +21,7 @@ export const HeaderSection = (): JSX.Element => {
     <header className="flex w-full items-center justify-between px-8 py-4 relative bg-transparent">
       <div className="flex items-center justify-around gap-2.5 relative">
         <div className="relative flex items-center gap-[10px]">
-          <img
-            className="w-[37px] h-[29px]"
-            alt="Logo icon"
-            src="/logo-icon.svg"
-          />
+          <span className="w-[37px] h-[29px] rounded-md bg-primary-100 text-[#043873] font-bold flex items-center justify-center">SP</span>
           <div className="[font-family:'Inter',Helvetica] font-bold text-[#4f9cf9] text-[28px] tracking-[0] leading-[normal]">
             whitepace
           </div>
@@ -65,7 +61,7 @@ export const HeaderSection = (): JSX.Element => {
 
           <Button className="inline-flex h-[60px] items-center justify-center gap-2.5 px-6 py-4 bg-[#4f9cf9] hover:bg-[#4f9cf9]/90 rounded-lg text-white font-paragraph-p2-medium font-[number:var(--paragraph-p2-medium-font-weight)] text-[length:var(--paragraph-p2-medium-font-size)] tracking-[var(--paragraph-p2-medium-letter-spacing)] leading-[var(--paragraph-p2-medium-line-height)] [font-style:var(--paragraph-p2-medium-font-style)]">
             Try Whitepace free
-            <img className="flex-[0_0_auto]" alt="Icon" src="/icon-18.svg" />
+            <span aria-hidden className="flex-[0_0_auto] font-semibold">→</span>
           </Button>
         </div>
       </div>

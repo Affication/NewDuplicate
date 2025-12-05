@@ -15,20 +15,17 @@ export const PricingSection = (): JSX.Element => {
       buttonClass: "bg-white border-[#ffe492] text-[#212529] h-auto",
       cardClass: "border-[#ffe492]",
       features: [
-        { text: "Sync unlimited devices", icon: "/icon.png" },
-        { text: "10 GB monthly uploads", icon: "/icon-1.png" },
-        { text: "200 MB max. note size", icon: "/icon-2.png" },
+        { text: "Sync unlimited devices" },
+        { text: "10 GB monthly uploads" },
+        { text: "200 MB max. note size" },
         {
           text: "Customize Home dashboard and access extra widgets",
-          icon: "/icon-3.png",
         },
         {
           text: "Connect primary Google Calendar account",
-          icon: "/icon-4.png",
         },
         {
           text: "Add due dates, reminders, and notifications to your tasks",
-          icon: "/icon-5.png",
         },
       ],
     },
@@ -43,20 +40,17 @@ export const PricingSection = (): JSX.Element => {
       buttonClass: "bg-[#4f9cf9] text-white h-auto",
       cardClass: "shadow-[0px_4px_50px_#00000014]",
       features: [
-        { text: "Sync unlimited devices", icon: "/icon-6.png" },
-        { text: "10 GB monthly uploads", icon: "/icon-7.png" },
-        { text: "200 MB max. note size", icon: "/icon-8.png" },
+        { text: "Sync unlimited devices" },
+        { text: "10 GB monthly uploads" },
+        { text: "200 MB max. note size" },
         {
           text: "Customize Home dashboard and access extra widgets",
-          icon: "/icon-9.png",
         },
         {
           text: "Connect primary Google Calendar account",
-          icon: "/icon-10.png",
         },
         {
           text: "Add due dates, reminders, and notifications to your tasks",
-          icon: "/icon-11.png",
         },
       ],
     },
@@ -71,20 +65,17 @@ export const PricingSection = (): JSX.Element => {
       buttonClass: "bg-white border-[#ffe492] text-[#212529] h-auto",
       cardClass: "border-[#ffe492]",
       features: [
-        { text: "Sync unlimited devices", icon: "/icon-12.png" },
-        { text: "10 GB monthly uploads", icon: "/icon-13.png" },
-        { text: "200 MB max. note size", icon: "/icon-14.png" },
+        { text: "Sync unlimited devices" },
+        { text: "10 GB monthly uploads" },
+        { text: "200 MB max. note size" },
         {
           text: "Customize Home dashboard and access extra widgets",
-          icon: "/icon-15.png",
         },
         {
           text: "Connect primary Google Calendar account",
-          icon: "/icon-16.png",
         },
         {
           text: "Add due dates, reminders, and notifications to your tasks",
-          icon: "/icon-17.png",
         },
       ],
     },
@@ -93,12 +84,6 @@ export const PricingSection = (): JSX.Element => {
   return (
     <section className="flex flex-col w-full items-center justify-center gap-[60px] px-8 py-[140px] relative">
       <header className="flex flex-col items-center gap-6 relative w-full">
-        <img
-          className="absolute w-[335px] h-[30px] top-[58px] left-1/2 transform -translate-x-1/2"
-          alt="Element"
-          src="/element-2.png"
-        />
-
         <h1 className="relative w-full mt-[-1.00px] font-header-h1 font-[number:var(--header-h1-font-weight)] text-[#212529] text-[length:var(--header-h1-font-size)] text-center tracking-[var(--header-h1-letter-spacing)] leading-[var(--header-h1-line-height)] [font-style:var(--header-h1-font-style)]">
           Choose Your Plan
         </h1>
@@ -140,11 +125,9 @@ export const PricingSection = (): JSX.Element => {
                     key={featureIndex}
                     className="flex items-center gap-[19px] relative w-full"
                   >
-                    <img
-                      className="relative w-[20.01px] h-[20.01px] ml-[-1.00px]"
-                      alt="Icon"
-                      src={feature.icon}
-                    />
+                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#4f9cf9] text-white text-xs font-bold">
+                      ✓
+                    </span>
 
                     <div
                       className={`relative flex-1 mt-[-1.00px] ${index === 1 ? "font-paragraph-p2-medium font-[number:var(--paragraph-p2-medium-font-weight)] text-[#043873] text-[length:var(--paragraph-p2-medium-font-size)] tracking-[var(--paragraph-p2-medium-letter-spacing)] leading-[var(--paragraph-p2-medium-line-height)] [font-style:var(--paragraph-p2-medium-font-style)]" : "font-paragraph-p3-regular font-[number:var(--paragraph-p3-regular-font-weight)] text-[#212529] text-[length:var(--paragraph-p3-regular-font-size)] tracking-[var(--paragraph-p3-regular-letter-spacing)] leading-[var(--paragraph-p3-regular-line-height)] [font-style:var(--paragraph-p3-regular-font-style)]"}`}

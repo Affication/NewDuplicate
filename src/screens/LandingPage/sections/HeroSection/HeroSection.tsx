@@ -5,12 +5,6 @@ import { Button } from "../../../../components/ui/button";
 export const HeroSection = (): JSX.Element => {
   return (
     <section className="flex w-full items-center px-8 py-[100px] relative bg-white">
-      <img
-        className="absolute w-full h-[433px] top-[152px] left-0"
-        alt="Element"
-        src="/element.png"
-      />
-
       <div className="flex flex-col items-start gap-[60px] relative flex-1 grow">
         <div className="flex flex-col items-start gap-6 relative self-stretch w-full flex-[0_0_auto]">
           <h1 className="relative self-stretch mt-[-1.00px] font-header-h2 font-[number:var(--header-h2-font-weight)] text-[#4f9cf9] text-[length:var(--header-h2-font-size)] tracking-[var(--header-h2-letter-spacing)] leading-[var(--header-h2-line-height)] [font-style:var(--header-h2-font-style)]">
